@@ -567,9 +567,13 @@ body.dark-theme .blur-bg-overlay {
 }
 
 
-
-
-
+.main{
+    margin-top: 20vh;
+}
+ 
+.banner-image{
+    border-radius: 6px 80px 10px 10px ;
+}
 .main>section>.container {
     display: flex;
     justify-content: center;
@@ -604,34 +608,70 @@ body.dark-theme .blur-bg-overlay {
     color: rgb(255, 255, 255);
     border: none;     
     cursor: pointer;   
-    transition: background-color 0.3s ease;
+    transition: background-color 0.1s ease;
 }
 
 .banner-inner > button:hover {
-    background-color: rgb(2, 73, 70); 
+   
+    background-color: rgb(65, 95, 70);
+ 
+    color: rgb(255, 255, 255);
+
+}
+/* css from araf */
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    border-radius: 40px; /* Increased Border Radius */
+    border: 1.4px solid #2e2e2d; /* Darker Border */
+    padding: 5px ; /* Smaller Padding */
+    width: 20%;
+    transition: width 0.3s ease; /* Smooth Transition */
+}
+
+.nav-input {
+    flex: 1;
+    outline: none;
+    border: none;
+    padding: 6px ; /* Smaller Padding */
+    font-size: 14px; /* Smaller Font Size */
+    background-color: transparent;
+}
+
+.nav-input::placeholder {
+    color: #999; /* Light Gray Placeholder Text */
+    font-style: italic; /* Italic Placeholder Text */
+}
+
+.nav-input:focus {
+    border-color: #1d1d1f; /* Darker Focus Border */
+}
+
+.fa-magnifying-glass {
+    font-size: 20px; /* Increased Icon Size */
+    color: #013d3f; /* Magnifying Glass Color */
+    cursor: pointer;
+    padding-right: 9px;
+    transition: transform 0.3s ease; /* Smooth Transition on Hover */
+}
+body.dark-theme .nav-search{
+    border-color: #f6f6ff;
+}
+body.dark-theme .fa-magnifying-glass{
+    color: #cfcece;
+}
+body.dark-theme .nav-input[type="text"] {
+   color: #ffffff; /* Darker Focus Border */
+}
+
+.fa-magnifying-glass:hover {
+    transform: scale(1.1); /* Zoom Effect on Hover */
 }
 
 
-.search {
-  display: flex;
-  width: 100%;
-}
 
-.searchTerm {
-  width: 100%;
-  border: 2px solid #000607;
 
-  padding: 15px 0;
-  height: 20px;
-  border-radius: 5px;
-  outline: none;
-  color: #9DBFAF;
-}
-
-.searchTerm:focus{
-  color: #000000;
-  padding: 15px 5px;
-}
 
 
 

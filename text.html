@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Overview</title>
+    <style>
+        .course-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .course-card {
+            border: 1px solid #ccc;
+            padding: 16px;
+            width: 200px;
+        }
+        .course-img img {
+            width: 100%;
+            height: auto;
+        }
+        .course-desc h1 {
+            font-size: 1.5em;
+        }
+        .course-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="course-wrapper"></div>
+
+    <section id="overview">
+        <div class="overview-container">
+            <h1>Invest in your varsity life with afak</h1>
+            <p class="overview_first_para">Get access to videos in over 90% of courses, Specializations,
+                and Professional Certificates taught by top instructors from leading universities and companies.</p>
+            <div class="overview-inner-container">
+                <div class="overview-wrapper">
+                    <!-- <div class="overview-card">
+                        <div class="overview-img">
+                            <img src="me.jpg" alt>
+                        </div>
+                        <div class="overview-desc">
+                            <p>Learn anything</p>
+                            <p>Explore any interest or trending topic, take prerequisites, and advance your skills</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let courseIndex = 0;
+        const courses = [
+            { URL: "images/cse.avif", courseTitle: "CSE", p: "amr sonar bangla ami tomary vlobasi chirodin tomar akash tomar batas", button: "View More" },
+            { URL: "images/english.avif", courseTitle: "ENGLISH", p: "amr sonar bangla ami tomary vlobasi chirodin tomar akash tomar batas", button: "View More" },
+            { URL: "images/phy.avif", courseTitle: "PHYSICS", p: "amr sonar bangla ami tomary vlobasi chirodin tomar akash tomar batas", button: "View More" },
+            { URL: "images/chem.avif", courseTitle: "CHEMISTRY", p: "amr sonar bangla ami tomary vlobasi chirodin tomar akash tomar batas", button: "View More" },
+            { URL: "images/math.avif", courseTitle: "MATHEMATICS", p: "amr sonar bangla ami tomary vlobasi chirodin tomar akash tomar batas", button: "View More" },
+            { URL: "images/algorithm.avif", courseTitle: "ALGORITHM", p: "amr sonar bangla ami tomary vlobasi chirodin tomar akash tomar batas", button: "View More" },
+            // Add more course objects here if needed
+        ];
+
+        function CreateCourse(URL, courseTitle, p, button) {
+            let html = `
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="${URL}" alt="${courseTitle}">
+                    </div>
+                    <div class="course-desc">
+                        <h1>${courseTitle}</h1>
+                        <p>${p}</p>
+                        <button class="course-btn">${button}</button>
+                    </div>
+                </div>
+            `;
+            document.querySelector(".course-wrapper").innerHTML += html;
+        }
+
+        function loadMoreCourses() {
+            for (let i = 0; i < 3; i++) { // Load 3 courses at a time
+                if (courseIndex < courses.length) {
+                    const course = courses[courseIndex];
+                    CreateCourse(course.URL, course.courseTitle, course.p, course.button);
+                    courseIndex++;
+                } else {
+                    // All courses are loaded
+                    window.removeEventListener('scroll', handleScroll);
+                    break;
+                }
+            }
+        }
+
+        function handleScroll() {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+                loadMoreCourses();
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Initial load
+        loadMoreCourses();
+    </script>
+
+</body>
+</html>
