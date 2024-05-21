@@ -1,0 +1,220 @@
+body {
+    transition: background-color 0.5s, color 0.5s;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dark-mode {
+    
+    background-color: #1e293b;
+    color: #ffffff;
+  
+   
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #1e293b;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.theme-toggle {
+    background-color: #4a5568;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-card, .content-card {
+    transition: background-color 0.5s, color 0.5s;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.profile-card.dark-mode, .content-card.dark-mode {
+    background-color: #2d3748;
+}
+
+.profile-card.light-mode, .content-card.light-mode {
+    background-color: #f8fafc;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.username {
+    color: #a0aec0;
+    font-size: 0.875rem;
+}
+
+.rank, .role {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.edit-profile {
+    margin-top: 1rem;
+    background-color: #48bb78;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.profile-details {
+    margin-top: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.badge {
+    background-color: #4a5568;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.community-stats h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.stats-details p {
+    margin: 0.25rem 0;
+}
+
+.stats-update {
+    font-size: 0.75rem;
+    color: #a0aec0;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.contest-rating .rating-score {
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+
+.global-ranking, .attended, .total-problems, .difficulty-title, .difficulty-count {
+    font-size: 0.875rem;
+    color: #a0aec0;
+}
+
+.solved-problems-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.solved-problems, .badges-section {
+    width: 100%;
+    max-width: 49%;
+    margin-bottom: 1rem;
+}
+
+.problems-difficulty {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.difficulty-item {
+    text-align: center;
+}
+
+.badges-display {
+    display: flex;
+    align-items: center;
+}
+
+.badges-display .badge {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5rem;
+}
+
+.recent-badge-label {
+    font-size: 0.875rem;
+    color: #a0aec0;
+    margin-top: 0.5rem;
+}
+
+.recent-submissions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-submissions .submission-item {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.recent-submissions .submission-time {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    margin-left: 0.5rem;
+}

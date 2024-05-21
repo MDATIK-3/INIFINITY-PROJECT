@@ -718,7 +718,7 @@ body.dark-theme .nav-input[type="text"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20vh 0;
+    margin: 10vh 0;
     /* height: 100vh; */
 }
 
@@ -761,4 +761,13 @@ body.dark-theme .nav-input[type="text"] {
     margin: 10px auto;
     line-height: 22px;
     font-size: 17px;
+}
+
+
+.login-btn {
+    display: none;
+}
+
+.profile-btn {
+    display: none;
 }
