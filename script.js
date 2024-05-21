@@ -1,12 +1,22 @@
+
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#course-slider', {
+        type   : 'loop',
+        perPage: 3,
+        autoplay: true,
+        breakpoints: {
+            1024: {
+                perPage: 2,
+            },
+            768: {
+                perPage: 1,
+            },
+        }
+    }).mount();
+});
     const navbarMenu = document.querySelector(".navbar .links");
     const hamburgerBtn = document.querySelector(".hamburger-btn");
     const hideMenuBtn = navbarMenu?.querySelector(".close-btn");
-    const showPopupBtn = document.querySelector(".login-btn");
-    const formPopup = document.querySelector(".form-popup");
-    const hidePopupBtn = formPopup?.querySelector(".close-btn");
-    const signupLoginLink = formPopup?.querySelectorAll(".bottom-link a");
-    const profileBtn = document.querySelector('.profile-btn');
-    const profilePopup = document.querySelector('.profile-popup-container');
 
     if (hamburgerBtn) {
         hamburgerBtn.addEventListener("click", () => {
@@ -15,8 +25,14 @@
     }
 
     if (hideMenuBtn) {
-        hideMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+        hideMenuBtn.addEventListener("click", () => {
+            navbarMenu.classList.remove("show-menu");
+        });
     }
+
+    const showPopupBtn = document.querySelector(".login-btn");
+    const formPopup = document.querySelector(".form-popup");
+    const hidePopupBtn = formPopup?.querySelector(".close-btn");
 
     if (showPopupBtn) {
         showPopupBtn.addEventListener("click", () => {
@@ -25,38 +41,43 @@
     }
 
     if (hidePopupBtn) {
-        hidePopupBtn.addEventListener("click", () => showPopupBtn.click());
+        hidePopupBtn.addEventListener("click", () => {
+            document.body.classList.remove("show-popup");
+        });
     }
 
-    if (signupLoginLink) {
-        signupLoginLink.forEach(link => {
+    const signupLoginLinks = formPopup?.querySelectorAll(".bottom-link a");
+
+    if (signupLoginLinks) {
+        signupLoginLinks.forEach(link => {
             link.addEventListener("click", (e) => {
                 e.preventDefault();
-                formPopup.classList[link.id === 'signup-link' ? 'add' : 'remove']("show-signup");
+                formPopup.classList.toggle("show-signup", link.id === 'signup-link');
             });
         });
     }
 
+    const profileBtn = document.querySelector('.profile-btn');
+    const profilePopup = document.querySelector('.profile-popup-container');
+
     if (profileBtn && profilePopup) {
-        profileBtn.addEventListener('mouseover', function(event) {
-            event.preventDefault();
+        profileBtn.addEventListener('mouseover', () => {
             profilePopup.classList.add('active');
         });
 
-        profilePopup.addEventListener('mouseenter', function(event) {
-            event.preventDefault();
+        profilePopup.addEventListener('mouseenter', () => {
             profilePopup.classList.add('active');
         });
 
-        profilePopup.addEventListener('mouseleave', function(event) {
-            event.preventDefault();
+        profilePopup.addEventListener('mouseleave', () => {
             profilePopup.classList.remove('active');
         });
     }
 
     const themeToggle = document.querySelector('.theme-toggle');
+
+    if (themeToggle) {
         themeToggle.addEventListener('click', () => {
-            console.log(6);
             document.body.classList.toggle('light-mode');
             document.body.classList.toggle('dark-mode');
             document.querySelectorAll('.profile-card, .content-card').forEach(card => {
@@ -64,4 +85,4 @@
                 card.classList.toggle('dark-mode');
             });
         });
-    
+    }

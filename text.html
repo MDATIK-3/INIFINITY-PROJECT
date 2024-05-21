@@ -1,71 +1,346 @@
-<div class="overview-container">
-    <h1>Invest in your varsity life with afak</h1>
-    <p class="overview_first_para">Get access to videos in over 90%
-        of courses, Specializations,
-        and Professional Certificates taught by top instructors from
-        leading universities and companies.</p>
-    <div class="overview-inner-container">
-        <div class="overview-wrapper">
-            <!-- <div class="overview-card">
-                <div class="overview-img">
-                    <img src="me.jpg" alt>
-                </div>
-                <div class="overview-desc">
-                    <p>Learn anything</p>
-                    <p>Explore any interest or trending topic, take
-                        prerequisites, and advance your skills</p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Course Slider</title>
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/js/splide.min.js"></script>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/css/splide.min.css">
+    </head>
+    <body>
+        <style>
+      
 
-                </div>
-            </div> -->
+.slider-title {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+}
 
-            <div class="overview-card">
-                <div class="overview-img">
-                    <img src="/learn.png" alt>
-                </div>
-                <div class="overview-desc">
-                    <p>Learn anything</p>
-                    <p>Explore any interest or trending topic, take
-                        prerequisites, and advance your skills</p>
+#course-slider {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 10px;
+}
 
+.course-container {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform .3s ease-in-out;
+    height: 400px;
+    width: 300px ;
+margin: 3vw;
+}
+
+.course-container:hover {
+    transform: translateY(-10px);
+}
+
+.course-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-details {
+    padding: 15px;
+}
+
+.course-details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0073e6;
+}
+
+.course-details h4 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.course-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.splide__arrow {
+    background: #0073e6;
+    border-radius: 50%;
+}
+
+.splide__arrow svg {
+    fill: #fff4f4;
+}
+.splide__pagination__page.is-active{
+    background: #0073e6;
+}
+
+    </style>
+        <div class="course-slide">
+
+            <h2 class="slider-title">Earn Your Degree</h2>
+            <div id="course-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://media.istockphoto.com/id/611189966/photo/study-studying-learn-learning-classroom-internet-concept.jpg?s=1024x1024&w=is&k=20&c=SzWWP87Inl6oN_5XTqRfxpTXRXtoJbVFtqODh87Q_44="
+                                    alt="University of Oklahoma">
+                                <div class="course-details">
+                                    <h3>University of Oklahoma</h3>
+                                    <h4>Master of Data Science and
+                                        Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Maryland Global Campus">
+                                <div class="course-details">
+                                    <h3>University of Maryland Global
+                                        Campus</h3>
+                                    <h4>Master of Science in Data Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1515168985652-8454bcc8fcaf?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Pittsburgh">
+                                <div class="course-details">
+                                    <h3>University of Pittsburgh</h3>
+                                    <h4>Master of Data Science</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://media.istockphoto.com/id/611189966/photo/study-studying-learn-learning-classroom-internet-concept.jpg?s=1024x1024&w=is&k=20&c=SzWWP87Inl6oN_5XTqRfxpTXRXtoJbVFtqODh87Q_44="
+                                    alt="University of Oklahoma">
+                                <div class="course-details">
+                                    <h3>University of Oklahoma</h3>
+                                    <h4>Master of Data Science and
+                                        Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Maryland Global Campus">
+                                <div class="course-details">
+                                    <h3>University of Maryland Global
+                                        Campus</h3>
+                                    <h4>Master of Science in Data Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1515168985652-8454bcc8fcaf?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Pittsburgh">
+                                <div class="course-details">
+                                    <h3>University of Pittsburgh</h3>
+                                    <h4>Master of Data Science</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://media.istockphoto.com/id/611189966/photo/study-studying-learn-learning-classroom-internet-concept.jpg?s=1024x1024&w=is&k=20&c=SzWWP87Inl6oN_5XTqRfxpTXRXtoJbVFtqODh87Q_44="
+                                    alt="University of Oklahoma">
+                                <div class="course-details">
+                                    <h3>University of Oklahoma</h3>
+                                    <h4>Master of Data Science and
+                                        Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Maryland Global Campus">
+                                <div class="course-details">
+                                    <h3>University of Maryland Global
+                                        Campus</h3>
+                                    <h4>Master of Science in Data Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1515168985652-8454bcc8fcaf?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Pittsburgh">
+                                <div class="course-details">
+                                    <h3>University of Pittsburgh</h3>
+                                    <h4>Master of Data Science</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://media.istockphoto.com/id/611189966/photo/study-studying-learn-learning-classroom-internet-concept.jpg?s=1024x1024&w=is&k=20&c=SzWWP87Inl6oN_5XTqRfxpTXRXtoJbVFtqODh87Q_44="
+                                    alt="University of Oklahoma">
+                                <div class="course-details">
+                                    <h3>University of Oklahoma</h3>
+                                    <h4>Master of Data Science and
+                                        Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Maryland Global Campus">
+                                <div class="course-details">
+                                    <h3>University of Maryland Global
+                                        Campus</h3>
+                                    <h4>Master of Science in Data Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1515168985652-8454bcc8fcaf?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Pittsburgh">
+                                <div class="course-details">
+                                    <h3>University of Pittsburgh</h3>
+                                    <h4>Master of Data Science</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://media.istockphoto.com/id/611189966/photo/study-studying-learn-learning-classroom-internet-concept.jpg?s=1024x1024&w=is&k=20&c=SzWWP87Inl6oN_5XTqRfxpTXRXtoJbVFtqODh87Q_44="
+                                    alt="University of Oklahoma">
+                                <div class="course-details">
+                                    <h3>University of Oklahoma</h3>
+                                    <h4>Master of Data Science and
+                                        Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Maryland Global Campus">
+                                <div class="course-details">
+                                    <h3>University of Maryland Global
+                                        Campus</h3>
+                                    <h4>Master of Science in Data Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Maryland Global Campus">
+                                <div class="course-details">
+                                    <h3>University of Maryland Global
+                                        Campus</h3>
+                                    <h4>Master of Science in Data Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1515168985652-8454bcc8fcaf?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Pittsburgh">
+                                <div class="course-details">
+                                    <h3>University of Pittsburgh</h3>
+                                    <h4>Master of Data Science</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://media.istockphoto.com/id/611189966/photo/study-studying-learn-learning-classroom-internet-concept.jpg?s=1024x1024&w=is&k=20&c=SzWWP87Inl6oN_5XTqRfxpTXRXtoJbVFtqODh87Q_44="
+                                    alt="University of Oklahoma">
+                                <div class="course-details">
+                                    <h3>University of Oklahoma</h3>
+                                    <h4>Master of Data Science and
+                                        Analytics</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="course-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1515168985652-8454bcc8fcaf?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="University of Pittsburgh">
+                                <div class="course-details">
+                                    <h3>University of Pittsburgh</h3>
+                                    <h4>Master of Data Science</h4>
+                                    <p>🎓 Earn a degree<br>Degree</p>
+                                </div>
+                            </div>
+                        </li> </ul>
                 </div>
             </div>
-
-            <div class="overview-card">
-                <div class="overview-img">
-                    <img src="/money.png" alt>
-                </div>
-                <div class="overview-desc">
-                    <p>Save money</p>
-                    <p>Spend less money on your learning if you plan to take
-                        multiple courses this year</p>
-
-                </div>
-            </div>
-
-            <div class="overview-card">
-                <div class="overview-img">
-                    <img src="flexible.png" alt>
-                </div>
-                <div class="overview-desc">
-                    <p>Flexible learning</p>
-                    <p>Learn at your own pace, move between multiple courses, or
-                        switch to a different course</p>
-
-                </div>
-            </div>
-
-            <div class="overview-card">
-                <div class="overview-img">
-                    <img src="/certificates.png" alt>
-                </div>
-                <div class="overview-desc">
-                    <p>Unlimited certificates</p>
-                    <p>Earn a certificate for every learning program that you
-                        complete at no additional cost</p>
-
-                </div>
-            </div>
-
         </div>
-    </div>
-</div>
+        <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#course-slider', {
+            type   : 'loop',
+            perPage: 3,
+            autoplay: true,
+            breakpoints: {
+                1024: {
+                    perPage: 2,
+                },
+                768: {
+                    perPage: 1,
+                },
+            }
+        }).mount();
+    });
+</script>
+
+    </body>
+</html>
